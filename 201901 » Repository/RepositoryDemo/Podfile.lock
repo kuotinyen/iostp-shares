@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (4.8.0)
+  - ChainsKit (0.1.7)
+  - ImageProvider (0.1.3)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - ChainsKit
+  - ImageProvider
+  - RealmSwift
+  - SDWebImage
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ChainsKit
+    - ImageProvider
+    - Realm
+    - RealmSwift
+    - SDWebImage
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  ChainsKit: 77c109ab17c055fe3f04e944fa4228646edb21d2
+  ImageProvider: 67b1646b0b88248b69f88054e2605164a573398b
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: c81d58a9e92d727a46ac99aed0fd712c6c5b549d
+
+COCOAPODS: 1.5.3
