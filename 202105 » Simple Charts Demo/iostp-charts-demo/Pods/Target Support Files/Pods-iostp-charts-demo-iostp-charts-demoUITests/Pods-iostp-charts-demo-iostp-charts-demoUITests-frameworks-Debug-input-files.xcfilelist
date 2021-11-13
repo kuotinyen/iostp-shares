@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-iostp-charts-demo-iostp-charts-demoUITests/Pods-iostp-charts-demo-iostp-charts-demoUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

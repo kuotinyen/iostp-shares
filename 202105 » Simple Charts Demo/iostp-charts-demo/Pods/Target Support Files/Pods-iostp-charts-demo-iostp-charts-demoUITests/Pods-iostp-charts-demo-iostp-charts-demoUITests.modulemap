@@ -1,0 +1,6 @@
+framework module Pods_iostp_charts_demo_iostp_charts_demoUITests {
+  umbrella header "Pods-iostp-charts-demo-iostp-charts-demoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

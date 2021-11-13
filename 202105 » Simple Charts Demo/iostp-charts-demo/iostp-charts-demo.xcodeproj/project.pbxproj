@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		054DA4FB2659593D00715F9B /* DemoLineChartAndMarkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA4FA2659593D00715F9B /* DemoLineChartAndMarkerViewController.swift */; };
+		054DA4FE265A3FA300715F9B /* DemoBarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA4FD265A3FA300715F9B /* DemoBarChartViewController.swift */; };
+		054DA500265A44E500715F9B /* CommonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA4FF265A44E500715F9B /* CommonModels.swift */; };
+		054DA504265A478600715F9B /* DemoLineBarCombinedChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA503265A478600715F9B /* DemoLineBarCombinedChartViewController.swift */; };
+		054DA508265A4BB600715F9B /* DemoPieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA507265A4BB600715F9B /* DemoPieChartViewController.swift */; };
+		054DA50E265BB77D00715F9B /* DemoLineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA50D265BB77D00715F9B /* DemoLineChartViewController.swift */; };
+		05A64206265916AF003E8AB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A64205265916AF003E8AB6 /* AppDelegate.swift */; };
+		05A6420D265916AF003E8AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A6420B265916AF003E8AB6 /* Main.storyboard */; };
+		05A6420F265916B0003E8AB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A6420E265916B0003E8AB6 /* Assets.xcassets */; };
+		05A64212265916B0003E8AB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A64210265916B0003E8AB6 /* LaunchScreen.storyboard */; };
+		05A6421D265916B0003E8AB6 /* iostp_charts_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6421C265916B0003E8AB6 /* iostp_charts_demoTests.swift */; };
+		05A64228265916B0003E8AB6 /* iostp_charts_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A64227265916B0003E8AB6 /* iostp_charts_demoUITests.swift */; };
+		05A6423726592478003E8AB6 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6423626592478003E8AB6 /* DemoListViewController.swift */; };
+		1BAB9D418D4569EAF3DDACB1 /* Pods_iostp_charts_demo_iostp_charts_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D002FE226C8ABBBE2D84423 /* Pods_iostp_charts_demo_iostp_charts_demoUITests.framework */; };
+		B93FE2DE0FE5E5E58E5791E3 /* Pods_iostp_charts_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BA39E4AF6ABBD35E358BF9 /* Pods_iostp_charts_demo.framework */; };
+		DE73ED3CB6ED67DA7F862F71 /* Pods_iostp_charts_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F831E965330879F717C748 /* Pods_iostp_charts_demoTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05A64219265916B0003E8AB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A641FA265916AF003E8AB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05A64201265916AF003E8AB6;
+			remoteInfo = "iostp-charts-demo";
+		};
+		05A64224265916B0003E8AB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A641FA265916AF003E8AB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05A64201265916AF003E8AB6;
+			remoteInfo = "iostp-charts-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04A0AA568B23D38D687F46DD /* Pods-iostp-charts-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostp-charts-demoTests.release.xcconfig"; path = "Target Support Files/Pods-iostp-charts-demoTests/Pods-iostp-charts-demoTests.release.xcconfig"; sourceTree = "<group>"; };
+		054DA4FA2659593D00715F9B /* DemoLineChartAndMarkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLineChartAndMarkerViewController.swift; sourceTree = "<group>"; };
+		054DA4FD265A3FA300715F9B /* DemoBarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBarChartViewController.swift; sourceTree = "<group>"; };
+		054DA4FF265A44E500715F9B /* CommonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModels.swift; sourceTree = "<group>"; };
+		054DA503265A478600715F9B /* DemoLineBarCombinedChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLineBarCombinedChartViewController.swift; sourceTree = "<group>"; };
+		054DA507265A4BB600715F9B /* DemoPieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPieChartViewController.swift; sourceTree = "<group>"; };
+		054DA50D265BB77D00715F9B /* DemoLineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLineChartViewController.swift; sourceTree = "<group>"; };
+		05A64202265916AF003E8AB6 /* iostp-charts-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iostp-charts-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A64205265916AF003E8AB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05A6420C265916AF003E8AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05A6420E265916B0003E8AB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05A64211265916B0003E8AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05A64213265916B0003E8AB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A64218265916B0003E8AB6 /* iostp-charts-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iostp-charts-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A6421C265916B0003E8AB6 /* iostp_charts_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iostp_charts_demoTests.swift; sourceTree = "<group>"; };
+		05A6421E265916B0003E8AB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A64223265916B0003E8AB6 /* iostp-charts-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iostp-charts-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A64227265916B0003E8AB6 /* iostp_charts_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iostp_charts_demoUITests.swift; sourceTree = "<group>"; };
+		05A64229265916B0003E8AB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A6423626592478003E8AB6 /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
+		23BA39E4AF6ABBD35E358BF9 /* Pods_iostp_charts_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostp_charts_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23C3F122AA648B702EECC53F /* Pods-iostp-charts-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostp-charts-demo.release.xcconfig"; path = "Target Support Files/Pods-iostp-charts-demo/Pods-iostp-charts-demo.release.xcconfig"; sourceTree = "<group>"; };
+		447738EFD55D4E40494D7C97 /* Pods-iostp-charts-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostp-charts-demoTests.debug.xcconfig"; path = "Target Support Files/Pods-iostp-charts-demoTests/Pods-iostp-charts-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D002FE226C8ABBBE2D84423 /* Pods_iostp_charts_demo_iostp_charts_demoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostp_charts_demo_iostp_charts_demoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EBC85EC5053C6FE4A6B4D3 /* Pods-iostp-charts-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostp-charts-demo.debug.xcconfig"; path = "Target Support Files/Pods-iostp-charts-demo/Pods-iostp-charts-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		7591C8A440B7916027148B29 /* Pods-iostp-charts-demo-iostp-charts-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostp-charts-demo-iostp-charts-demoUITests.release.xcconfig"; path = "Target Support Files/Pods-iostp-charts-demo-iostp-charts-demoUITests/Pods-iostp-charts-demo-iostp-charts-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		87F831E965330879F717C748 /* Pods_iostp_charts_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostp_charts_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4EEF275C744B99171C6BA1 /* Pods-iostp-charts-demo-iostp-charts-demoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostp-charts-demo-iostp-charts-demoUITests.debug.xcconfig"; path = "Target Support Files/Pods-iostp-charts-demo-iostp-charts-demoUITests/Pods-iostp-charts-demo-iostp-charts-demoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05A641FF265916AF003E8AB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93FE2DE0FE5E5E58E5791E3 /* Pods_iostp_charts_demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A64215265916B0003E8AB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE73ED3CB6ED67DA7F862F71 /* Pods_iostp_charts_demoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A64220265916B0003E8AB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BAB9D418D4569EAF3DDACB1 /* Pods_iostp_charts_demo_iostp_charts_demoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		054DA4F92659593500715F9B /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				054DA4FF265A44E500715F9B /* CommonModels.swift */,
+				054DA50D265BB77D00715F9B /* DemoLineChartViewController.swift */,
+				054DA4FD265A3FA300715F9B /* DemoBarChartViewController.swift */,
+				054DA503265A478600715F9B /* DemoLineBarCombinedChartViewController.swift */,
+				054DA507265A4BB600715F9B /* DemoPieChartViewController.swift */,
+				054DA4FA2659593D00715F9B /* DemoLineChartAndMarkerViewController.swift */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		05A641F9265916AF003E8AB6 = {
+			isa = PBXGroup;
+			children = (
+				05A64204265916AF003E8AB6 /* iostp-charts-demo */,
+				05A6421B265916B0003E8AB6 /* iostp-charts-demoTests */,
+				05A64226265916B0003E8AB6 /* iostp-charts-demoUITests */,
+				05A64203265916AF003E8AB6 /* Products */,
+				14EBC114832EA00116AC5950 /* Pods */,
+				3A0DC5DF45AC4F8CD135C1FE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		05A64203265916AF003E8AB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05A64202265916AF003E8AB6 /* iostp-charts-demo.app */,
+				05A64218265916B0003E8AB6 /* iostp-charts-demoTests.xctest */,
+				05A64223265916B0003E8AB6 /* iostp-charts-demoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05A64204265916AF003E8AB6 /* iostp-charts-demo */ = {
+			isa = PBXGroup;
+			children = (
+				054DA4F92659593500715F9B /* Demos */,
+				05A64205265916AF003E8AB6 /* AppDelegate.swift */,
+				05A6423626592478003E8AB6 /* DemoListViewController.swift */,
+				05A6420B265916AF003E8AB6 /* Main.storyboard */,
+				05A6420E265916B0003E8AB6 /* Assets.xcassets */,
+				05A64210265916B0003E8AB6 /* LaunchScreen.storyboard */,
+				05A64213265916B0003E8AB6 /* Info.plist */,
+			);
+			path = "iostp-charts-demo";
+			sourceTree = "<group>";
+		};
+		05A6421B265916B0003E8AB6 /* iostp-charts-demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				05A6421C265916B0003E8AB6 /* iostp_charts_demoTests.swift */,
+				05A6421E265916B0003E8AB6 /* Info.plist */,
+			);
+			path = "iostp-charts-demoTests";
+			sourceTree = "<group>";
+		};
+		05A64226265916B0003E8AB6 /* iostp-charts-demoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05A64227265916B0003E8AB6 /* iostp_charts_demoUITests.swift */,
+				05A64229265916B0003E8AB6 /* Info.plist */,
+			);
+			path = "iostp-charts-demoUITests";
+			sourceTree = "<group>";
+		};
+		14EBC114832EA00116AC5950 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52EBC85EC5053C6FE4A6B4D3 /* Pods-iostp-charts-demo.debug.xcconfig */,
+				23C3F122AA648B702EECC53F /* Pods-iostp-charts-demo.release.xcconfig */,
+				AC4EEF275C744B99171C6BA1 /* Pods-iostp-charts-demo-iostp-charts-demoUITests.debug.xcconfig */,
+				7591C8A440B7916027148B29 /* Pods-iostp-charts-demo-iostp-charts-demoUITests.release.xcconfig */,
+				447738EFD55D4E40494D7C97 /* Pods-iostp-charts-demoTests.debug.xcconfig */,
+				04A0AA568B23D38D687F46DD /* Pods-iostp-charts-demoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3A0DC5DF45AC4F8CD135C1FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23BA39E4AF6ABBD35E358BF9 /* Pods_iostp_charts_demo.framework */,
+				4D002FE226C8ABBBE2D84423 /* Pods_iostp_charts_demo_iostp_charts_demoUITests.framework */,
+				87F831E965330879F717C748 /* Pods_iostp_charts_demoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05A64201265916AF003E8AB6 /* iostp-charts-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A6422C265916B0003E8AB6 /* Build configuration list for PBXNativeTarget "iostp-charts-demo" */;
+			buildPhases = (
+				A486B6CC3C7D65D3E7157594 /* [CP] Check Pods Manifest.lock */,
+				05A641FE265916AF003E8AB6 /* Sources */,
+				05A641FF265916AF003E8AB6 /* Frameworks */,
+				05A64200265916AF003E8AB6 /* Resources */,
+				4EF9449C5B1903B5E6F79660 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iostp-charts-demo";
+			productName = "iostp-charts-demo";
+			productReference = 05A64202265916AF003E8AB6 /* iostp-charts-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05A64217265916B0003E8AB6 /* iostp-charts-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A6422F265916B0003E8AB6 /* Build configuration list for PBXNativeTarget "iostp-charts-demoTests" */;
+			buildPhases = (
+				A1AE3CB6ACFFB4F05AF38F50 /* [CP] Check Pods Manifest.lock */,
+				05A64214265916B0003E8AB6 /* Sources */,
+				05A64215265916B0003E8AB6 /* Frameworks */,
+				05A64216265916B0003E8AB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05A6421A265916B0003E8AB6 /* PBXTargetDependency */,
+			);
+			name = "iostp-charts-demoTests";
+			productName = "iostp-charts-demoTests";
+			productReference = 05A64218265916B0003E8AB6 /* iostp-charts-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05A64222265916B0003E8AB6 /* iostp-charts-demoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A64232265916B0003E8AB6 /* Build configuration list for PBXNativeTarget "iostp-charts-demoUITests" */;
+			buildPhases = (
+				2351127AD07BB0E8111488C6 /* [CP] Check Pods Manifest.lock */,
+				05A6421F265916B0003E8AB6 /* Sources */,
+				05A64220265916B0003E8AB6 /* Frameworks */,
+				05A64221265916B0003E8AB6 /* Resources */,
+				A5E8ACCD6FBE83B68BD37A6A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05A64225265916B0003E8AB6 /* PBXTargetDependency */,
+			);
+			name = "iostp-charts-demoUITests";
+			productName = "iostp-charts-demoUITests";
+			productReference = 05A64223265916B0003E8AB6 /* iostp-charts-demoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05A641FA265916AF003E8AB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					05A64201265916AF003E8AB6 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					05A64217265916B0003E8AB6 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 05A64201265916AF003E8AB6;
+					};
+					05A64222265916B0003E8AB6 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 05A64201265916AF003E8AB6;
+					};
+				};
+			};
+			buildConfigurationList = 05A641FD265916AF003E8AB6 /* Build configuration list for PBXProject "iostp-charts-demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05A641F9265916AF003E8AB6;
+			productRefGroup = 05A64203265916AF003E8AB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05A64201265916AF003E8AB6 /* iostp-charts-demo */,
+				05A64217265916B0003E8AB6 /* iostp-charts-demoTests */,
+				05A64222265916B0003E8AB6 /* iostp-charts-demoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05A64200265916AF003E8AB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A64212265916B0003E8AB6 /* LaunchScreen.storyboard in Resources */,
+				05A6420F265916B0003E8AB6 /* Assets.xcassets in Resources */,
+				05A6420D265916AF003E8AB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A64216265916B0003E8AB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A64221265916B0003E8AB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2351127AD07BB0E8111488C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iostp-charts-demo-iostp-charts-demoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF9449C5B1903B5E6F79660 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostp-charts-demo/Pods-iostp-charts-demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostp-charts-demo/Pods-iostp-charts-demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iostp-charts-demo/Pods-iostp-charts-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1AE3CB6ACFFB4F05AF38F50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iostp-charts-demoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A486B6CC3C7D65D3E7157594 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iostp-charts-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5E8ACCD6FBE83B68BD37A6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostp-charts-demo-iostp-charts-demoUITests/Pods-iostp-charts-demo-iostp-charts-demoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iostp-charts-demo-iostp-charts-demoUITests/Pods-iostp-charts-demo-iostp-charts-demoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iostp-charts-demo-iostp-charts-demoUITests/Pods-iostp-charts-demo-iostp-charts-demoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05A641FE265916AF003E8AB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054DA500265A44E500715F9B /* CommonModels.swift in Sources */,
+				054DA508265A4BB600715F9B /* DemoPieChartViewController.swift in Sources */,
+				054DA4FE265A3FA300715F9B /* DemoBarChartViewController.swift in Sources */,
+				054DA504265A478600715F9B /* DemoLineBarCombinedChartViewController.swift in Sources */,
+				054DA4FB2659593D00715F9B /* DemoLineChartAndMarkerViewController.swift in Sources */,
+				05A64206265916AF003E8AB6 /* AppDelegate.swift in Sources */,
+				054DA50E265BB77D00715F9B /* DemoLineChartViewController.swift in Sources */,
+				05A6423726592478003E8AB6 /* DemoListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A64214265916B0003E8AB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A6421D265916B0003E8AB6 /* iostp_charts_demoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A6421F265916B0003E8AB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A64228265916B0003E8AB6 /* iostp_charts_demoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05A6421A265916B0003E8AB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05A64201265916AF003E8AB6 /* iostp-charts-demo */;
+			targetProxy = 05A64219265916B0003E8AB6 /* PBXContainerItemProxy */;
+		};
+		05A64225265916B0003E8AB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05A64201265916AF003E8AB6 /* iostp-charts-demo */;
+			targetProxy = 05A64224265916B0003E8AB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05A6420B265916AF003E8AB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05A6420C265916AF003E8AB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05A64210265916B0003E8AB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05A64211265916B0003E8AB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05A6422A265916B0003E8AB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05A6422B265916B0003E8AB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05A6422D265916B0003E8AB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52EBC85EC5053C6FE4A6B4D3 /* Pods-iostp-charts-demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iostp-charts-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tk.iostp-charts-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05A6422E265916B0003E8AB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C3F122AA648B702EECC53F /* Pods-iostp-charts-demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iostp-charts-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tk.iostp-charts-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		05A64230265916B0003E8AB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 447738EFD55D4E40494D7C97 /* Pods-iostp-charts-demoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iostp-charts-demoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tk.iostp-charts-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iostp-charts-demo.app/iostp-charts-demo";
+			};
+			name = Debug;
+		};
+		05A64231265916B0003E8AB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A0AA568B23D38D687F46DD /* Pods-iostp-charts-demoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iostp-charts-demoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tk.iostp-charts-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iostp-charts-demo.app/iostp-charts-demo";
+			};
+			name = Release;
+		};
+		05A64233265916B0003E8AB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC4EEF275C744B99171C6BA1 /* Pods-iostp-charts-demo-iostp-charts-demoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iostp-charts-demoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tk.iostp-charts-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iostp-charts-demo";
+			};
+			name = Debug;
+		};
+		05A64234265916B0003E8AB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7591C8A440B7916027148B29 /* Pods-iostp-charts-demo-iostp-charts-demoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iostp-charts-demoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tk.iostp-charts-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iostp-charts-demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05A641FD265916AF003E8AB6 /* Build configuration list for PBXProject "iostp-charts-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A6422A265916B0003E8AB6 /* Debug */,
+				05A6422B265916B0003E8AB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A6422C265916B0003E8AB6 /* Build configuration list for PBXNativeTarget "iostp-charts-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A6422D265916B0003E8AB6 /* Debug */,
+				05A6422E265916B0003E8AB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A6422F265916B0003E8AB6 /* Build configuration list for PBXNativeTarget "iostp-charts-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A64230265916B0003E8AB6 /* Debug */,
+				05A64231265916B0003E8AB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A64232265916B0003E8AB6 /* Build configuration list for PBXNativeTarget "iostp-charts-demoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A64233265916B0003E8AB6 /* Debug */,
+				05A64234265916B0003E8AB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05A641FA265916AF003E8AB6 /* Project object */;
+}
