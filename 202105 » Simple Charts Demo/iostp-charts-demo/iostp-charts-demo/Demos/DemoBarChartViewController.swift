@@ -9,10 +9,60 @@ import UIKit
 import SnapKit
 import Charts
 
-class DemoBarChartView: UIView {
-    var xAxis: XAxis { chartView.xAxis }
+protocol ChartContainer {
+    var chartView: BarLineChartViewBase { get }
+}
 
-    private let chartView = BarChartView()
+struct ChartContainerEmptyViewModel {
+    let text: String
+    let textFont: UIFont
+    let textColor: UIColor
+    let textAlignment: NSTextAlignment
+
+    static let Default = ChartContainerEmptyViewModel(text: "沒資料",
+                                                      textFont: .systemFont(ofSize: 16),
+                                                      textColor: .gray,
+                                                      textAlignment: .center)
+}
+
+struct ChartContainerGesturesViewModel {
+    var pinchZoomEnabled: Bool = false
+    var doubleTapToZoomEnabled: Bool = false
+    var scaleXEnabled: Bool = false
+    var scaleYEnabled: Bool = false
+    var dragYEnabled: Bool = false
+    var dragXEnabled: Bool = false
+
+    static func makeViewModel(ignoreKeyPaths: [WritableKeyPath<Self, Bool>]) -> Self {
+        var viewModel = ChartContainerGesturesViewModel()
+        ignoreKeyPaths.forEach { viewModel[keyPath: $0] = true }
+        return viewModel
+    }
+}
+
+extension ChartContainer {
+    func setupEmptyChart(viewModel: ChartContainerEmptyViewModel = .Default) {
+        chartView.noDataText = viewModel.text
+        chartView.noDataFont = viewModel.textFont
+        chartView.noDataTextColor = viewModel.textColor
+        chartView.noDataTextAlignment = viewModel.textAlignment
+    }
+
+    func disableBarLineChartZoomAndDragGestures(viewModel: ChartContainerGesturesViewModel) {
+        chartView.pinchZoomEnabled = viewModel.pinchZoomEnabled
+        chartView.doubleTapToZoomEnabled = false
+        chartView.scaleXEnabled = false
+        chartView.scaleYEnabled = false
+        chartView.dragYEnabled = false
+        chartView.dragXEnabled = false
+    }
+}
+
+class DemoBarChartView: UIView, ChartContainer {
+    var chartView: BarLineChartViewBase { barChartView }
+
+    var xAxis: XAxis { barChartView.xAxis }
+    private let barChartView = BarChartView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,35 +75,24 @@ class DemoBarChartView: UIView {
     }
 
     private func commonInit() {
-        addSubview(chartView)
-        chartView.snp.makeConstraints { (make) in
+        addSubview(barChartView)
+        barChartView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         setupChartView()
     }
 
     func setupChartView() {
-        // setup no data UI
-        chartView.noDataText = "沒資料"
-        chartView.noDataFont = .systemFont(ofSize: 16)
-        chartView.noDataTextColor = .gray
-        chartView.noDataTextAlignment = .center
-
-        // disable default chart gesture
-        chartView.pinchZoomEnabled = false
-        chartView.doubleTapToZoomEnabled = false
-        chartView.scaleXEnabled = false
-        chartView.scaleYEnabled = false
-        chartView.dragYEnabled = false
-        chartView.dragXEnabled = false
+        setupEmptyChart()
+        disableBarLineChartZoomAndDragGestures(viewModel: .makeViewModel(ignoreKeyPaths: [\.doubleTapToZoomEnabled]))
 
         // disable default legend
-        chartView.legend.enabled = true
-        chartView.legend.drawInside = false
-        chartView.legend.verticalAlignment = .top
+        barChartView.legend.enabled = true
+        barChartView.legend.drawInside = false
+        barChartView.legend.verticalAlignment = .top
 
         // customize xAxis
-        let xAxis = chartView.xAxis
+        let xAxis = barChartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.drawGridLinesEnabled = false
         xAxis.drawAxisLineEnabled = false
@@ -62,14 +101,14 @@ class DemoBarChartView: UIView {
 //        xAxis.labelRotationAngle = -45
 
         // customize yAxis
-        let leftAxis = chartView.leftAxis
+        let leftAxis = barChartView.leftAxis
         leftAxis.gridLineWidth = 1
         leftAxis.gridColor = .lightGray
         leftAxis.axisLineColor = .lightGray
         leftAxis.drawZeroLineEnabled = false
         leftAxis.drawAxisLineEnabled = false
 
-        let rightAxis = chartView.rightAxis
+        let rightAxis = barChartView.rightAxis
         rightAxis.drawGridLinesEnabled = false
         rightAxis.drawAxisLineEnabled = false
         rightAxis.drawLabelsEnabled = false
@@ -77,13 +116,13 @@ class DemoBarChartView: UIView {
 
     func populate(with chartData: BarChartData?, isDisplayTwoGroups: Bool = false) {
         guard let chartData = chartData else {
-            chartView.data = nil
+            barChartView.data = nil
             return
         }
 
         // re-poistion to make chart data point "inside" chart margins
-        chartView.xAxis.axisMinimum = chartData.xMin - 0.5
-        chartView.xAxis.axisMaximum = chartData.xMax + 0.5
+        barChartView.xAxis.axisMinimum = chartData.xMin - 0.5
+        barChartView.xAxis.axisMaximum = chartData.xMax + 0.5
 
         if isDisplayTwoGroups {
             // render two bar style, remove #groupBars if you just need one bar
@@ -93,7 +132,7 @@ class DemoBarChartView: UIView {
             chartData.barWidth = 0.5
         }
 
-        chartView.data = chartData
+        barChartView.data = chartData
     }
 }
 

@@ -12,7 +12,7 @@ import Charts
 class DemoLineChartView: UIView {
     var xAxis: XAxis { chartView.xAxis }
 
-    private let chartView = LineChartView()
+    let chartView = LineChartView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,6 +47,10 @@ class DemoLineChartView: UIView {
         chartView.dragYEnabled = false
         chartView.dragXEnabled = false
 
+        chartView.renderer = FillAreaLineChartRenderer(dataProvider: chartView,
+                                                       animator: chartView.chartAnimator,
+                                                       viewPortHandler: chartView.viewPortHandler)
+
         // disable default legend
         chartView.legend.enabled = true
         chartView.legend.verticalAlignment = .top
@@ -66,7 +70,7 @@ class DemoLineChartView: UIView {
         leftAxis.gridLineWidth = 1
         leftAxis.gridColor = .lightGray
         leftAxis.axisLineColor = .lightGray
-        leftAxis.drawZeroLineEnabled = false
+        leftAxis.drawZeroLineEnabled = true
         leftAxis.drawAxisLineEnabled = false
 
         let rightAxis = chartView.rightAxis
@@ -110,25 +114,33 @@ class DemoLineChartViewController: UIViewController {
         // setup xAxis string value formatter
         chartView.xAxis.valueFormatter = self
 
-        let confirmCasesEntries = confirmCaseModels.enumerated()
-            .map { index, value in ChartDataEntry(x: Double(index), y: Double(value.number)) }
-        let casesSet = makeDataSet(with: confirmCasesEntries, label: "確診數", color: .orange)
-
         let correctedConfirmCasesEntries = confirmCaseModels.enumerated()
             .map { index, value in ChartDataEntry(x: Double(index), y: Double(value.correctNumber)) }
-        let correctedCasesSet = makeDataSet(with: correctedConfirmCasesEntries, label: "校正回歸確診數", color: .blue)
+
+        let confirmCasesEntries = confirmCaseModels.enumerated()
+            .map { index, value in ChartDataEntry(x: Double(index), y: Double(value.number)) }
+
+
+
+        let casesSet = makeDataSet(with: confirmCasesEntries, label: "確診數", color: .orange, shouldFillColor: true, boundaryDataSet: nil)
+
+        let correctedCasesSet = makeDataSet(with: correctedConfirmCasesEntries, label: "校正回歸確診數", color: .blue, shouldFillColor: true, boundaryDataSet: casesSet)
 
         let chartData: LineChartData = .init(dataSets: [casesSet, correctedCasesSet])
         chartView.populate(with: chartData)
     }
 
-    private func makeDataSet(with entries: [ChartDataEntry], label: String, color: UIColor) -> LineChartDataSet {
+    private func makeDataSet(with entries: [ChartDataEntry], label: String, color: UIColor, shouldFillColor: Bool, boundaryDataSet: LineChartDataSet? = nil) -> LineChartDataSet {
         let dataSet: LineChartDataSet = .init(entries: entries, label: label)
         dataSet.circleRadius = 2.5
         dataSet.lineWidth = 1.5
         dataSet.drawValuesEnabled = false
         dataSet.circleColors = [color]
         dataSet.colors = [color]
+        dataSet.drawFilledEnabled = shouldFillColor
+        dataSet.fillColor = color
+        dataSet.fillAlpha = 0.3
+        dataSet.fillFormatter = shouldFillColor ? FillAreaLineFormatter(boundaryDataSet: boundaryDataSet) : nil
         return dataSet
     }
 }
@@ -143,5 +155,107 @@ extension DemoLineChartViewController: IAxisValueFormatter {
         default:
             return String(describing: value)
         }
+    }
+}
+
+class FillAreaLineFormatter: IFillFormatter {
+    var boundaryDataSet: LineChartDataSet?
+
+    init(boundaryDataSet: LineChartDataSet?) {
+        self.boundaryDataSet = boundaryDataSet
+    }
+
+    public func getFillLinePosition(dataSet: ILineChartDataSet, dataProvider: LineChartDataProvider) -> CGFloat {
+        let minimumAxisDisplayValue = Double(dataProvider.getAxis(.left).getFormattedLabel(.zero)) ?? .zero
+        return CGFloat(minimumAxisDisplayValue)
+    }
+
+    public func getBoundaryDataSet() -> LineChartDataSet {
+        return boundaryDataSet ?? LineChartDataSet()
+    }
+}
+
+class FillAreaLineChartRenderer: LineChartRenderer {
+    override func drawLinearFill(context: CGContext,
+                                 dataSet: ILineChartDataSet,
+                                 trans: Transformer,
+                                 bounds: BarLineScatterCandleBubbleRenderer.XBounds) {
+        guard let dataProvider = dataProvider,
+              let fillAreaFormatter = dataSet.fillFormatter as? FillAreaLineFormatter  else { return }
+
+        let filledPath = makeFilledPath(dataSet: dataSet,
+                                        fillMin: fillAreaFormatter.getFillLinePosition(dataSet: dataSet,
+                                                                                       dataProvider: dataProvider),
+                                        boundaryDataSet: fillAreaFormatter.getBoundaryDataSet(),
+                                        bounds: bounds,
+                                        matrix: trans.valueToPixelMatrix)
+        if let fill = dataSet.fill {
+            drawFilledPath(context: context, path: filledPath, fill: fill, fillAlpha: dataSet.fillAlpha)
+        } else {
+            drawFilledPath(context: context, path: filledPath, fillColor: dataSet.fillColor, fillAlpha: dataSet.fillAlpha)
+        }
+    }
+
+    private func makeFilledPath(dataSet: ILineChartDataSet,
+                                fillMin: CGFloat,
+                                boundaryDataSet: ILineChartDataSet?,
+                                bounds: XBounds,
+                                matrix: CGAffineTransform) -> CGPath {
+        let phaseY = animator.phaseY
+        let isDrawSteppedEnabled = dataSet.mode == .stepped
+        var entry: ChartDataEntry! = dataSet.entryForIndex(bounds.min)
+        var boundaryEntry: ChartDataEntry? = boundaryDataSet?.entryForIndex(bounds.min)
+        let path = CGMutablePath()
+
+        if entry != nil {
+            if let boundaryEntry = boundaryEntry {
+                path.move(to: CGPoint(x: CGFloat(entry.x), y: CGFloat(boundaryEntry.y * phaseY)), transform: matrix)
+            } else {
+                path.move(to: CGPoint(x: CGFloat(entry.x), y: fillMin), transform: matrix)
+            }
+
+            path.addLine(to: CGPoint(x: CGFloat(entry.x), y: CGFloat(entry.y * phaseY)), transform: matrix)
+        }
+
+        // Draw current entries line
+        for x in stride(from: (bounds.min + 1), through: bounds.range + bounds.min, by: 1) {
+            guard let entry = dataSet.entryForIndex(x) else { continue }
+
+            if isDrawSteppedEnabled {
+                guard let previousEntry = dataSet.entryForIndex(x-1) else { continue }
+                path.addLine(to: CGPoint(x: CGFloat(entry.x), y: CGFloat(previousEntry.y * phaseY)), transform: matrix)
+            }
+
+            path.addLine(to: CGPoint(x: CGFloat(entry.x), y: CGFloat(entry.y * phaseY)), transform: matrix)
+        }
+
+        // Draw a path to the start of the fill line
+        entry = dataSet.entryForIndex(bounds.range + bounds.min)
+        boundaryEntry = boundaryDataSet?.entryForIndex(bounds.range + bounds.min)
+        if entry != nil {
+            if let boundaryEntry = boundaryEntry {
+                path.addLine(to: CGPoint(x: CGFloat(entry.x), y: CGFloat(boundaryEntry.y * phaseY)), transform: matrix)
+            } else {
+                path.addLine(to: CGPoint(x: CGFloat(entry.x), y: fillMin), transform: matrix)
+            }
+        }
+
+        // Draw bondary entries line
+        if let boundaryDataSet = boundaryDataSet {
+            for x in stride(from: (bounds.min + 1), through: bounds.range + bounds.min, by: 1).reversed() {
+                guard let e = boundaryDataSet.entryForIndex(x) else { continue }
+
+                if isDrawSteppedEnabled {
+                    guard let previousEntry = boundaryDataSet.entryForIndex(x-1) else { continue }
+                    path.addLine(to: CGPoint(x: CGFloat(e.x), y: CGFloat(previousEntry.y * phaseY)), transform: matrix)
+                }
+
+                path.addLine(to: CGPoint(x: CGFloat(e.x), y: CGFloat(e.y * phaseY)), transform: matrix)
+            }
+        }
+
+        path.closeSubpath()
+
+        return path
     }
 }
